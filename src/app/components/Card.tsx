@@ -7,7 +7,7 @@ interface Props extends PropsWithChildren<{}> {
 export const Card: React.FC<Props> = ({ additionalStyle, children }) => {
   return (
     <div
-      className={`shadow rounded-xl p-5  + ${
+      className={`shadow rounded-xl p-5 dark:bg-slate-700  + ${
         additionalStyle ? additionalStyle : ""
       }`}
     >

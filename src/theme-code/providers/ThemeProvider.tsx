@@ -1,12 +1,17 @@
 import React, { createContext, PropsWithChildren, useContext } from "react";
 
+export type Theme =
+  | "theme-blue"
+  | "theme-dark-blue"
+  | "theme-purple"
+  | "theme-green"
+  | "theme-red"
+  | "theme-yellow";
 interface ThemeContext {
   mode: "" | "dark";
   setMode: (mode: "" | "dark") => void;
-  theme: "blue" | "dark-blue" | "green" | "purple" | "red" | "yellow";
-  setTheme: (
-    theme: "blue" | "dark-blue" | "green" | "purple" | "red" | "yellow"
-  ) => void;
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
   isStrached: boolean;
   setIsStrached: (strach: boolean) => void;
   direction: "ltr" | "rtl";
@@ -18,7 +23,7 @@ interface ThemeContext {
 export const ThemeContext = createContext<ThemeContext | null>({
   mode: "",
   setMode: () => {},
-  theme: "blue",
+  theme: "theme-blue",
   setTheme: () => {},
   isStrached: false,
   setIsStrached: () => {},
@@ -37,10 +42,8 @@ export const useThemeContext = () => {
 };
 
 export const ThemeProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [mode, setMode] = React.useState<"" | "dark">("");
-  const [theme, setTheme] = React.useState<
-    "blue" | "dark-blue" | "green" | "purple" | "red" | "yellow"
-  >("blue");
+  const [mode, setMode] = React.useState<"" | "dark">("dark");
+  const [theme, setTheme] = React.useState<Theme>("theme-green");
   const [isStrached, setIsStrached] = React.useState<boolean>(false);
   const [direction, setDirection] = React.useState<"ltr" | "rtl">("ltr");
   const [contrast, setContrast] = React.useState<boolean>(false);

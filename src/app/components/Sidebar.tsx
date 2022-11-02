@@ -2,7 +2,7 @@ import React, { PropsWithChildren } from "react";
 import { NavConfigItem } from "../pages/App/App";
 import { BottomSidebar } from "./BottomSidebar";
 import { Div } from "./Div";
-import { Img } from "./Img";
+import { RImage } from "./RImage";
 import { MiddleSidebar } from "./MiddleSidebar";
 import { TopSidebar } from "./TopSidebar";
 
@@ -23,7 +23,7 @@ export const Sidebar: React.FC<Props> = ({ isCollapsed, navConfig }) => {
       }`}
     >
       <TopSidebar>
-        <Img src="/vite.svg" alt="placeholder" className="w-16 h-16" />
+        <RImage src="/vite.svg" alt="placeholder" className="w-16 h-16" />
         <Div className={`${isCollapsed ? "hidden" : "block"}`}>
           Welcome back <span>Srdjan</span>
         </Div>

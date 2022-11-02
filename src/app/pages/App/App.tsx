@@ -3,78 +3,57 @@ import { Container } from "../../components/Container";
 import { Content } from "../../components/Content";
 import { Header } from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";
-import { Routes, Route } from "react-router-dom";
 import { useThemeContext } from "../../../theme-code/providers/ThemeProvider";
 import { RButton } from "../../../theme-code/components/wrappers/RButton";
+import { navConfig } from "../../../theme-code/routing/navConfig";
+import Router from "./Router";
+// import Home from "../Home";
+// import Settings from "../Settings";
+// import TestPage from "../TestPage";
+// import Users from "../Users";
 
 export interface NavConfigItem {
   name: string;
-  icon: string;
   path: string;
+  icon?: React.ReactNode;
   active?: boolean;
 }
 
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const { mode, setMode, theme, isStrached, setIsStrached } = useThemeContext();
-
-  const navConfig: NavConfigItem[] = [
-    {
-      name: "Home",
-      icon: "home",
-      path: "/",
-      active: true,
-    },
-    {
-      name: "Test",
-      icon: "settings",
-      path: "/test",
-    },
-    {
-      name: "Users",
-      icon: "users",
-      path: "/users",
-    },
-    {
-      name: "Settings",
-      icon: "settings",
-      path: "/settings",
-    },
-  ];
+  const { mode, setMode, theme, setTheme, isStrached, setIsStrached } =
+    useThemeContext();
 
   return (
     <div className={`${mode} ${theme}`}>
-      <div className="bg-slate-50 dark:bg-slate-800 dark:text-slate-50">
+      <div className="bg-slate-50 dark:bg-slate-800 dark:text-slate-50 min-h-screen">
         <Header>
           <RButton onClick={() => setIsCollapsed(!isCollapsed)}>TT</RButton>
           <RButton onClick={() => setMode(mode === "" ? "dark" : "")}>
             mode
           </RButton>
           <RButton onClick={() => setIsStrached(!isStrached)}>Stratch</RButton>
-          <RButton onClick={() => setIsCollapsed(!isCollapsed)}>TT</RButton>
-          <RButton onClick={() => setIsCollapsed(!isCollapsed)}>TT</RButton>
+          <RButton onClick={() => setTheme("theme-blue")}>Blue</RButton>
+          <RButton onClick={() => setTheme("theme-dark-blue")}>
+            Dark blue
+          </RButton>
+          <RButton onClick={() => setTheme("theme-purple")}>Purple</RButton>
+          <RButton onClick={() => setTheme("theme-green")}>Green</RButton>
+          <RButton onClick={() => setTheme("theme-red")}>Red</RButton>
+          <RButton onClick={() => setTheme("theme-yellow")}>Yellow</RButton>
         </Header>
         <Container>
           <Sidebar isCollapsed={isCollapsed} navConfig={navConfig} />
-          <Content isStrached={isStrached}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Routes>
-                <Route path="/" element={<LazyHome />} />
-                <Route path="test" element={<LazyTestPage />} />
-                <Route path="settings" element={<LazySettings />} />
-                <Route path="users" element={<LazyUsers />} />
-              </Routes>
-            </Suspense>
-          </Content>
+          <Router />
         </Container>
       </div>
     </div>
   );
 }
 
-const LazyHome = lazy(() => import("../Home"));
-const LazyTestPage = lazy(() => import("../TestPage"));
-const LazySettings = lazy(() => import("../Settings"));
-const LazyUsers = lazy(() => import("../Users"));
+const Home = lazy(() => import("../Home"));
+const TestPage = lazy(() => import("../TestPage"));
+const Settings = lazy(() => import("../Settings"));
+const Users = lazy(() => import("../Users"));
 
 export default App;

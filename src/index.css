@@ -1,33 +1,47 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* "theme-blue"
+  | "theme-dark-blue"
+  | "theme-purple"
+  | "theme-green"
+  | "theme-red"
+  | "theme-yellow" */
+
+/* | "inherit"
+  | "primary" changes color
+  | "secondary" always blue
+  | "success" always green
+  | "error" always red
+  | "info" always aqua
+  | "warning"; always orange */
 
 @layer base {
   :root {
-    --color-text-base: 255, 255, 255;
-    --color-text-muted: 199, 210, 254;
-    --color-text-inverted: 79, 70, 229;
-    --color-fill: 67, 56, 202;
-    --color-accent: 255, 255, 255;
-    --color-accent-hover: 238, 242, 255;
-    --color-muted: 99, 102, 241;
+    --color-primary: #1e3a8a;
+    --color-secondary: #1e40af;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+    --color-warning: #f59e0b;
   }
-  .theme-swiss {
-    --color-text-base: 255, 255, 255;
-    --color-text-muted: 254, 202, 202;
-    --color-text-inverted: 220, 38, 38;
-    --color-fill: 185, 28, 28;
-    --color-accent: 255, 255, 255;
-    --color-accent-hover: 254, 242, 242;
-    --color-muted: 239, 68, 68;
+
+  .theme-blue {
+    --color-primary: #1e40af;
   }
-  .theme-neon {
-    --color-text-base: 17, 24, 2;
-    --color-text-muted: 47, 67, 6;
-    --color-text-inverted: 235, 250, 204;
-    --color-fill: 179, 255, 23;
-    --color-accent: 36, 52, 3;
-    --color-accent-hover: 55, 79, 5;
-    --color-muted: 212, 255, 122;
+  .theme-dark-blue {
+    --color-primary: #1e3a8a;
+  }
+  .theme-purple {
+    --color-primary: #8b5cf6;
+  }
+  .theme-green {
+    --color-primary: #10b981;
+  }
+  .theme-red {
+    --color-primary: #ef4444;
+  }
+  .theme-yellow {
+    --color-primary: #f59e0b;
   }
 }

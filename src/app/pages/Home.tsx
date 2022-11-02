@@ -1,22 +1,87 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Card } from "../components/Card";
 import { Grid } from "../components/Grid";
+import { RPage } from "../components/Page/RPage";
+import { RImage } from "../components/RImage";
+import RBarChartExample from "../components/RBarChartExample";
+import RLineChart from "../components/RLineChart";
+import { RPieChart } from "../components/RPieChart";
+// const RPieChart = lazy(() => import("../components/RPieChart"));
 
 export const Home = () => {
   return (
-    <div>
+    <RPage
+      title="Home"
+      breadcrumbsLinks={[
+        {
+          name: "Home",
+          path: "/home",
+        },
+        {
+          name: "Test",
+          path: "/test",
+        },
+      ]}
+    >
       <Grid className="grid-cols-6 gap-4">
+        {/* todo grid item */}
+        <Card additionalStyle="col-span-4">
+          <p>test</p>
+          <p>test</p>
+        </Card>
+        <Card>
+          <p>test</p>
+          <p>test</p>
+        </Card>
+        <Card>
+          <p>test</p>
+          <p>test</p>
+        </Card>
+
+        <Card additionalStyle="col-span-6">
+          <RBarChartExample />
+        </Card>
+        <Card additionalStyle="col-span-6">
+          <RPieChart />
+        </Card>
+        <Card additionalStyle="col-span-6">
+          <RLineChart />
+        </Card>
+        <Card additionalStyle="col-span-6">
+          <RLineChart />
+        </Card>
+        <Card additionalStyle="col-span-6">
+          <RBarChartExample />
+        </Card>
+        <Card additionalStyle="col-span-6">
+          <RPieChart />
+        </Card>
+        <Card additionalStyle="col-span-6">
+          <RLineChart />
+        </Card>
+        <Card additionalStyle="col-span-6">
+          <RBarChartExample />
+        </Card>
+        <Card additionalStyle="col-span-6">
+          <RPieChart />
+        </Card>
         <Card additionalStyle="col-span-2">
-          <p>test</p>
-          <p>test</p>
+          <RImage src="/images/rooms/room_1.jpg" alt="placeholder" />
         </Card>
-        <Card>
-          <p>test</p>
-          <p>test</p>
+        <Card additionalStyle="col-span-2">
+          <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
         </Card>
-        <Card>
-          <p>test</p>
-          <p>test</p>
+        <Card additionalStyle="col-span-2">
+          <RImage src="/images/rooms/room_3.jpg" alt="placeholder" />
+        </Card>
+        <Card additionalStyle="col-span-2">
+          <RImage src="/images/rooms/room_4.jpg" alt="placeholder" />
+        </Card>
+        <Card additionalStyle="col-span-2">
+          <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
+        </Card>
+        <Card additionalStyle="col-span-2">
+          <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
         </Card>
       </Grid>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, tenetur
@@ -126,7 +191,7 @@ export const Home = () => {
       accusamus, assumenda officiis alias tenetur dignissimos accusantium
       doloribus saepe. Consequatur libero cumque quae hic dolorum voluptas ipsam
       quam doloremque vitae!
-    </div>
+    </RPage>
   );
 };
 

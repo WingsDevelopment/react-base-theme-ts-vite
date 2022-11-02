@@ -27,6 +27,7 @@ module.exports = {
           accent: withOpacity("--color-accent"),
           "accent-hover": withOpacity("--color-accent-hover"),
           muted: withOpacity("--color-muted"),
+          primary: "var(--color-primary)",
         },
       },
       gradientColorStops: {
