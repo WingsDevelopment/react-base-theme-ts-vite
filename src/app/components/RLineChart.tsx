@@ -1,8 +1,12 @@
+import React from "react";
 import ReactApexChart from "react-apexcharts";
 
 const RLineChart = () => {
   const options = {
     chart: {
+      animations: {
+        enabled: true,
+      },
       height: 350,
       zoom: {
         enabled: true,

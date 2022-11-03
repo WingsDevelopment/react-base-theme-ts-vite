@@ -5,7 +5,7 @@ import { RPage } from "../components/Page/RPage";
 import { RImage } from "../components/RImage";
 import RBarChartExample from "../components/RBarChartExample";
 import RLineChart from "../components/RLineChart";
-import { RPieChart } from "../components/RPieChart";
+import RPieChart from "../components/RPieChart";
 
 export const Users = () => {
   return (

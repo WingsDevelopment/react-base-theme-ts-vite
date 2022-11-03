@@ -1,8 +1,15 @@
 import React, { lazy } from "react";
 import Chart from "react-apexcharts";
 
-export const RPieChart = () => {
-  const options = { labels: ["Comedy", "Action", "Romance", "Drama", "SciFi"] };
+const RPieChart = () => {
+  const options = {
+    chart: {
+      animations: {
+        enabled: true,
+      },
+    },
+    labels: ["Comedy", "Action", "Romance", "Drama", "SciFi"],
+  };
   const series = [4, 5, 6, 1, 5]; //our data
 
   return (
@@ -11,3 +18,5 @@ export const RPieChart = () => {
     </div>
   );
 };
+
+export default RPieChart;

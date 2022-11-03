@@ -1,13 +1,24 @@
-import React, { lazy } from "react";
+import React, { lazy, useEffect } from "react";
 import { Card } from "../components/Card";
 import { Grid } from "../components/Grid";
 import { RPage } from "../components/Page/RPage";
 import { RImage } from "../components/RImage";
 import RBarChartExample from "../components/RBarChartExample";
 import RLineChart from "../components/RLineChart";
-import { RPieChart } from "../components/RPieChart";
+import RPieChart from "../components/RPieChart";
 
 export const Settings = () => {
+  // const [isFakeLoading, setIsFakeLoading] = React.useState(true);
+
+  // useEffect(() => {
+  //   //time out 100 ms
+  //   setTimeout(() => {
+  //     setIsFakeLoading(false);
+  //   }, 100);
+  // }, []);
+
+  // if (isFakeLoading) return <>loading...</>;
+
   return (
     <RPage
       title="Settings"
@@ -37,31 +48,31 @@ export const Settings = () => {
           <p>test</p>
         </Card>
 
-        <Card additionalStyle="col-span-6">
+        <Card additionalStyle="col-span-3">
           <RPieChart />
         </Card>
-        <Card additionalStyle="col-span-6">
+        <Card additionalStyle="col-span-3">
           <RLineChart />
         </Card>
-        <Card additionalStyle="col-span-6">
+        <Card additionalStyle="col-span-3">
           <RBarChartExample />
         </Card>
-        <Card additionalStyle="col-span-6">
+        <Card additionalStyle="col-span-3">
           <RLineChart />
         </Card>
-        <Card additionalStyle="col-span-6">
+        <Card additionalStyle="col-span-3">
           <RBarChartExample />
         </Card>
-        <Card additionalStyle="col-span-6">
+        <Card additionalStyle="col-span-3">
           <RPieChart />
         </Card>
-        <Card additionalStyle="col-span-6">
+        <Card additionalStyle="col-span-3">
           <RLineChart />
         </Card>
-        <Card additionalStyle="col-span-6">
+        <Card additionalStyle="col-span-3">
           <RBarChartExample />
         </Card>
-        <Card additionalStyle="col-span-6">
+        <Card additionalStyle="col-span-3">
           <RPieChart />
         </Card>
         <Card additionalStyle="col-span-2">

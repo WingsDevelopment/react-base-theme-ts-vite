@@ -14,3 +14,14 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     </ThemeProvider>
   </React.StrictMode>
 );
+
+// ReactDOM.render(
+//    <React.StrictMode>
+//     <ThemeProvider>
+//       <BrowserRouter>
+//         <App />
+//       </BrowserRouter>
+//     </ThemeProvider>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
