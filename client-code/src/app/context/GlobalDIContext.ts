@@ -1,4 +1,3 @@
-import { Console } from "console";
 import { ConsoleLoggerService } from "../libs/logging/ConsoleLoggerService";
 import { ILoggingService } from "../libs/logging/ILoggingService";
 import { INotificationService } from "../libs/notification/NotificationInterface";

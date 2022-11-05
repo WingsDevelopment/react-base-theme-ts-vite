@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { RPage } from "../../../../components/Page/RPage";
-import { TagRoutes } from "../../routes/TagRoutes";
+import { TagRoutes } from "../../routes";
 import { useFetchAllTag } from "../../state/queries/useFetchAllTag";
 import { IndexTagBody } from "./components/IndexTagBody";
 

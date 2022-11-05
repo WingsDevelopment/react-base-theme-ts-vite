@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import { RPage } from "../../../../components/Page/RPage";
-import { TagRoutes } from "../../routes/TagRoutes";
+import { TagRoutes } from "../../routes";
 import { useFetchTagById } from "../../state/queries/useFetchTagById";
 import { DetailsTagBody } from "./components/DetailsTagBody";
 

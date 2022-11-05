@@ -1,5 +1,5 @@
 import RIconify from "../../app/components/RIconify";
-import { TagRoutes } from "../../app/features/Tag/routes/TagRoutes";
+import { TagRoutes } from "../../app/features/Tag/routes";
 import { NavConfigItem } from "../../app/pages/App/App";
 
 export const navConfig: NavConfigItem[] = [
@@ -7,7 +7,6 @@ export const navConfig: NavConfigItem[] = [
     name: "Home",
     icon: <RIconify icon="file-icons:test-rust" />,
     path: "/home",
-    active: true,
   },
   {
     name: "Settings",
@@ -29,12 +28,10 @@ export const navConfig: NavConfigItem[] = [
     icon: <RIconify icon="healthicons:intestinal-pain-negative" />,
     path: TagRoutes.index,
   },
-
   {
     name: "Home1",
     icon: <RIconify icon="noto:test-tube" />,
     path: "/home1",
-    active: true,
   },
   {
     name: "Test1",
@@ -56,7 +53,6 @@ export const navConfig: NavConfigItem[] = [
     name: "Home2",
     icon: <RIconify icon="logos:testlodge" />,
     path: "/home2",
-    active: true,
   },
   {
     name: "Test2",
@@ -78,7 +74,6 @@ export const navConfig: NavConfigItem[] = [
     name: "Home3",
     icon: <RIconify icon="file-icons:test-rust" />,
     path: "/home3",
-    active: true,
   },
   {
     name: "Test3",
@@ -99,7 +94,6 @@ export const navConfig: NavConfigItem[] = [
     name: "Home4",
     icon: <RIconify icon="file-icons:test-rust" />,
     path: "/home4",
-    active: true,
   },
   {
     name: "Test4",
