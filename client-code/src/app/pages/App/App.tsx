@@ -44,16 +44,13 @@ function App() {
         </Header>
         <Container>
           <Sidebar isCollapsed={isCollapsed} navConfig={navConfig} />
-          <Router />
+          <Suspense fallback={<div>loading. . .</div>}>
+            <Router />
+          </Suspense>
         </Container>
       </div>
     </div>
   );
 }
-
-const Home = lazy(() => import("../Home"));
-const TestPage = lazy(() => import("../TestPage"));
-const Settings = lazy(() => import("../Settings"));
-const Users = lazy(() => import("../Users"));
 
 export default App;

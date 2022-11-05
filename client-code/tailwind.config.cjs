@@ -11,7 +11,10 @@ function withOpacity(variableName) {
 module.exports = {
   mode: "jit",
   darkMode: "class",
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/react-tailwindcss-select/dist/index.esm.js",
+  ],
   theme: {
     extend: {
       textColor: {

@@ -1,15 +1,10 @@
 import React from "react";
+import { FieldProps } from ".";
 
-interface TextFieldProps {
-  name: string;
-  label: string;
-  value: string;
+interface TextFieldProps extends FieldProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  error?: boolean;
-  helperText?: string;
-  required?: boolean;
   placeholder?: string;
-  type?: string;
+  value: string;
 }
 
 export const TextField: React.FC<TextFieldProps> = ({
@@ -18,10 +13,8 @@ export const TextField: React.FC<TextFieldProps> = ({
   value,
   onChange,
   error,
-  helperText,
   required,
   placeholder,
-  type,
 }) => {
   return (
     <div>
@@ -29,7 +22,7 @@ export const TextField: React.FC<TextFieldProps> = ({
         {label}
       </label>
       <input
-        type={type}
+        type="text"
         name={name}
         value={value}
         onChange={onChange}
@@ -40,9 +33,7 @@ export const TextField: React.FC<TextFieldProps> = ({
         }
       />
       {error && (
-        <p className="mt-2 text-sm text-red-600 dark:text-red-400">
-          {helperText}
-        </p>
+        <p className="text-sm text-red-600 dark:text-red-400">{error}</p>
       )}
     </div>
   );

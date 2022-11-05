@@ -25,11 +25,11 @@ export const Settings = () => {
       breadcrumbsLinks={[
         {
           name: "Home",
-          path: "/home",
+          href: "/home",
         },
         {
           name: "Test",
-          path: "/test",
+          href: "/test",
         },
       ]}
     >

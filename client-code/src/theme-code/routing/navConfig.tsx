@@ -1,4 +1,5 @@
 import RIconify from "../../app/components/RIconify";
+import { TagRoutes } from "../../app/features/Tag/routes/TagRoutes";
 import { NavConfigItem } from "../../app/pages/App/App";
 
 export const navConfig: NavConfigItem[] = [
@@ -22,6 +23,11 @@ export const navConfig: NavConfigItem[] = [
     name: "Users",
     icon: <RIconify icon="vscode-icons:folder-type-vscode-test3" />,
     path: "/users",
+  },
+  {
+    name: "Tags",
+    icon: <RIconify icon="healthicons:intestinal-pain-negative" />,
+    path: TagRoutes.index,
   },
 
   {
