@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { useParams, useNavigate } from "react-router";
 import { RPage } from "../../../../components/Page/RPage";
 import { Tag, createEmptyTag } from "../../models/Tag";
-import { TagRoutes } from "../../routes";
+import { TagRoutes } from "../../routing";
 import { useUpdateTag } from "../../state/mutations/useUpdateTag";
 import { useFetchTagById } from "../../state/queries/useFetchTagById";
 import { UpdateTagForm } from "./components/UpdateTagForm";

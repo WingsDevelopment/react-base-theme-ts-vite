@@ -1,4 +1,4 @@
-import { getServerErrorMessage } from "../../../theme-code/utils/utils";
+import { getServerErrorMessage } from "../../utils/utils";
 import { GlobalDIContext } from "../../context/GlobalDIContext";
 
 export const staticDataDefaultRQConfig = {

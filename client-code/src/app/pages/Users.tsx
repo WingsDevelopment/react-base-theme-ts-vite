@@ -1,11 +1,11 @@
 import React, { lazy } from "react";
-import { Card } from "../components/Card";
-import { Grid } from "../components/Grid";
+import { Card } from "../components/card/Card";
+import { Grid } from "../components/grid/Grid";
 import { RPage } from "../components/Page/RPage";
-import { RImage } from "../components/RImage";
-import RBarChartExample from "../components/RBarChartExample";
-import RLineChart from "../components/RLineChart";
-import RPieChart from "../components/RPieChart";
+import { RImage } from "../components/image/RImage";
+import RBarChartExample from "../components/charts/RBarChartExample";
+import RLineChart from "../components/charts/RLineChart";
+import RPieChart from "../components/charts/RPieChart";
 
 export const Users = () => {
   return (

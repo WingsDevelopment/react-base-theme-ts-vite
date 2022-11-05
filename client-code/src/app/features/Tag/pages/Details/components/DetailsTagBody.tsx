@@ -1,6 +1,6 @@
-import { AsyncContent } from "../../../../../../theme-code/components/loadable/AsyncContent";
-import { DefaultReadOnlyTextField } from "../../../../../../theme-code/components/wrappers/ReadOnlyInputs/DefaultReadOnlyTextField";
-import { RSingleColumnBox } from "../../../../../../theme-code/components/wrappers/RSingleColumnBox";
+import { AsyncContent } from "../../../../../components/wrappers/AsyncContent";
+import { DefaultReadOnlyTextField } from "../../../../../components/input/readonly/DefaultReadOnlyTextField";
+import { RSingleColumnBox } from "../../../../../components/wrappers/RSingleColumnBox";
 import { Tag } from "../../../models/Tag";
 
 interface Props {

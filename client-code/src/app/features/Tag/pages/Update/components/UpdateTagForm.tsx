@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { AsyncContent } from "../../../../../../theme-code/components/loadable/AsyncContent";
-import MyFormProvider from "../../../../../../theme-code/components/wrappers/RRHFInputs/MyFormProvider";
-import RRHFTextField from "../../../../../../theme-code/components/wrappers/RRHFInputs/RRHFTextField";
-import { RSingleColumnBox } from "../../../../../../theme-code/components/wrappers/RSingleColumnBox";
-import { REQUIRED_FIELD_ERROR_MESSAGE } from "../../../../../../theme-code/utils/utils";
+import { AsyncContent } from "../../../../../components/wrappers/AsyncContent";
+import MyFormProvider from "../../../../../components/input/reactHookForms/MyFormProvider";
+import RRHFTextField from "../../../../../components/input/reactHookForms/RRHFTextField";
+import { RSingleColumnBox } from "../../../../../components/wrappers/RSingleColumnBox";
+import { REQUIRED_FIELD_ERROR_MESSAGE } from "../../../../../utils/utils";
 import { Tag } from "../../../models/Tag";
 
 interface Props {

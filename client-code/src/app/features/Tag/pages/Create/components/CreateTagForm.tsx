@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { AsyncContent } from "../../../../../../theme-code/components/loadable/AsyncContent";
-import MyFormProvider from "../../../../../../theme-code/components/wrappers/RRHFInputs/MyFormProvider";
-import RRHFTextField from "../../../../../../theme-code/components/wrappers/RRHFInputs/RRHFTextField";
-import RRHFTextFieldMultiline from "../../../../../../theme-code/components/wrappers/RRHFInputs/RRHFTextFieldMultiline";
-import { RSingleColumnBox } from "../../../../../../theme-code/components/wrappers/RSingleColumnBox";
+import { AsyncContent } from "../../../../../components/wrappers/AsyncContent";
+import MyFormProvider from "../../../../../components/input/reactHookForms/MyFormProvider";
+import RRHFTextField from "../../../../../components/input/reactHookForms/RRHFTextField";
+import RRHFTextFieldMultiline from "../../../../../components/input/reactHookForms/RRHFTextFieldMultiline";
+import { RSingleColumnBox } from "../../../../../components/wrappers/RSingleColumnBox";
 import { CreateTag } from "../../../models/CreateTag";
 
 interface Props {

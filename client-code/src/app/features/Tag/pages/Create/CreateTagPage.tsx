@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { useNavigate } from "react-router";
 import { RPage } from "../../../../components/Page/RPage";
 import { CreateTag } from "../../models/CreateTag";
-import { TagRoutes } from "../../routes";
+import { TagRoutes } from "../../routing";
 import { useCreateTag } from "../../state/mutations/useCreateTag";
 import { CreateTagForm } from "./components/CreateTagForm";
 

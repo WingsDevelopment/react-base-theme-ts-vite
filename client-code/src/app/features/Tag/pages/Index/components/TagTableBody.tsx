@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { GenericTableBody } from "../../../../../../theme-code/components/tables/GenericTableBody";
+import { GenericTableBody } from "../../../../../components/table/GenericTableBody";
 import { Tag } from "../../../models/Tag";
-import { TagRoutes } from "../../../routes";
+import { TagRoutes } from "../../../routing";
 
 interface Props {
   tags: Tag[] | undefined;

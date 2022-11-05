@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { GenericPaginableTable } from "../../../../../../theme-code/components/tables/GenericPaginableTable";
-import { usePaginableSortedData } from "../../../../../../theme-code/hooks/usePaginableSortableData";
+import { GenericPaginableTable } from "../../../../../components/table/GenericPaginableTable";
+import { usePaginableSortedData } from "../../../../../hooks/usePaginableSortableData";
 import { Tag } from "../../../models/Tag";
 import TagTableBody from "./TagTableBody";
 

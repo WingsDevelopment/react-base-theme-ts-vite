@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import App from "./app/pages/App/App";
+import App from "./app/pages/App";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-import { ThemeProvider } from "./theme-code/providers/ThemeProvider";
+import { ThemeProvider } from "./app/providers/ThemeProvider";
 
 import { ReactQueryDevtools } from "react-query/devtools";
 import { QueryClient, QueryClientProvider } from "react-query";

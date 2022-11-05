@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
-import { AsyncContent } from "../../../theme-code/components/loadable/AsyncContent";
-import { ILink, RBreadcrumbs } from "../RBreadcrumbs";
+import { AsyncContent } from "../wrappers/AsyncContent";
+import { ILink, RBreadcrumbs } from "../wrappers/RBreadcrumbs";
 import { RPageContent } from "./RPageContent";
 
 interface Props extends PropsWithChildren<{}> {

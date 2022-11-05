@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { ILink, RBreadcrumbs } from "../RBreadcrumbs";
+import { ILink, RBreadcrumbs } from "../wrappers/RBreadcrumbs";
 import { RPageContent } from "./RPageContent";
 
 interface Props extends PropsWithChildren<{}> {

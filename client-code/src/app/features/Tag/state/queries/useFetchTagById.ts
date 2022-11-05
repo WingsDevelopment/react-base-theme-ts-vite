@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient } from "react-query";
-import { getServerErrorMessage } from "../../../../../theme-code/utils/utils";
+import { getServerErrorMessage } from "../../../../utils/utils";
 import { useDefaultRQConfig } from "../../../../libs/reactQuery";
 import { DIContext } from "../../context/DIContext";
 import { tagModelExtension } from "../../infrastracture/DTOs/TagDTO";
