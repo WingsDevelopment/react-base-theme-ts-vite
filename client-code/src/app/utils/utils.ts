@@ -12,8 +12,8 @@ export const getServerErrorMessage = (error: any): string => {
   if (error?.request?.status === 500) {
     return error;
   } else if (error?.request?.status === 404) {
-    return "Ups, problem sa serverom";
+    return "Ups, something wen wrong";
   } else {
-    return "Greska!";
+    return "Error!";
   }
 };
