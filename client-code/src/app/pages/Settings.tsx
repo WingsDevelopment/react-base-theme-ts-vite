@@ -6,6 +6,9 @@ import RBarChartExample from "../components/charts/RBarChartExample";
 import RLineChart from "../components/charts/RLineChart";
 import RPieChart from "../components/charts/RPieChart";
 import { Div } from "../components/wrappers/Div";
+import { Grid } from "@mui/material";
+import { RGridContainer } from "../components/grid/RGridContainer";
+import { RGridItem } from "../components/grid/RGridItem";
 
 export const Settings = () => {
   // const [isFakeLoading, setIsFakeLoading] = React.useState(true);
@@ -33,26 +36,76 @@ export const Settings = () => {
         },
       ]}
     >
-      <Div className="grid sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-12">
-        <Div className="col-span-3">
+      <Grid container spacing={2}>
+        <Grid item md={6}>
+          <Card>MUI test</Card>
+        </Grid>
+        <Grid item md={6}>
+          <Card>MUI test</Card>
+        </Grid>
+        <Grid item md={6}>
+          <Card>MUI test</Card>
+        </Grid>
+      </Grid>
+      <RGridContainer className="gap-x-4">
+        <RGridItem size={6}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem size={6}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem size={3}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem size={9}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem size={1}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem size={1}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem size={10}>
+          <Card>my test</Card>
+        </RGridItem>
+      </RGridContainer>
+      {/* implement mui flex-grid with tailwind */}
+      {/* <Div className="flex flex-row flex-wrap">
+        <Div className="w-1/10 min-w-fit p-2">
+          <Card>TAIL test</Card>
+        </Div>
+        <Div className="w-1/2 min-w-fit p-2">
+          <Card>TAIL test</Card>
+        </Div>
+        <Div className="w-1/2 min-w-fit p-2">
+          <Card>TAIL test</Card>
+        </Div>
+      </Div> */}
+      <hr />
+      <hr />
+      <hr />
+      <hr />
+      <Div className="grid grid-cols-12">
+        <Div className="col-span-3 min-w-fit">
           <Card>
             <p>test1</p>
-            <p>test</p>
+            <p>test1</p>
           </Card>
         </Div>
-        <Div className="col-span-3">
+        <Div className="col-span-3 min-w-fit">
           <Card>
-            <p>test</p>
-            <p>test</p>
+            <p>test1</p>
+            <p>test1</p>
           </Card>
         </Div>
-        <Div className="col-span-3">
+        <Div className="col-span-3 min-w-fit">
           <Card>
-            <p>test</p>
-            <p>test</p>
+            <p>test1</p>
+            <p>test1</p>
           </Card>
         </Div>
-        <Div className="col-span-3">
+        <Div className="col-span-3 min-w-fit">
           <Card>
             <p>test</p>
             <p>test</p>
