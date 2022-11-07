@@ -1,11 +1,11 @@
 import React, { lazy, useEffect } from "react";
 import { Card } from "../components/card/Card";
-import { Grid } from "../components/grid/Grid";
 import { RPage } from "../components/Page/RPage";
 import { RImage } from "../components/image/RImage";
 import RBarChartExample from "../components/charts/RBarChartExample";
 import RLineChart from "../components/charts/RLineChart";
 import RPieChart from "../components/charts/RPieChart";
+import { Div } from "../components/wrappers/Div";
 
 export const Settings = () => {
   // const [isFakeLoading, setIsFakeLoading] = React.useState(true);
@@ -33,67 +33,130 @@ export const Settings = () => {
         },
       ]}
     >
-      <Grid className="grid-cols-6 gap-4">
-        {/* todo grid item */}
-        <Card additionalStyle="col-span-4">
-          <p>test</p>
-          <p>test</p>
-        </Card>
-        <Card>
-          <p>test</p>
-          <p>test</p>
-        </Card>
-        <Card>
-          <p>test</p>
-          <p>test</p>
-        </Card>
+      <Div className="grid sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-12">
+        <Div className="col-span-3">
+          <Card>
+            <p>test1</p>
+            <p>test</p>
+          </Card>
+        </Div>
+        <Div className="col-span-3">
+          <Card>
+            <p>test</p>
+            <p>test</p>
+          </Card>
+        </Div>
+        <Div className="col-span-3">
+          <Card>
+            <p>test</p>
+            <p>test</p>
+          </Card>
+        </Div>
+        <Div className="col-span-3">
+          <Card>
+            <p>test</p>
+            <p>test</p>
+          </Card>
+        </Div>
 
-        <Card additionalStyle="col-span-3">
-          <RPieChart />
-        </Card>
-        <Card additionalStyle="col-span-3">
-          <RLineChart />
-        </Card>
-        <Card additionalStyle="col-span-3">
-          <RBarChartExample />
-        </Card>
-        <Card additionalStyle="col-span-3">
-          <RLineChart />
-        </Card>
-        <Card additionalStyle="col-span-3">
-          <RBarChartExample />
-        </Card>
-        <Card additionalStyle="col-span-3">
-          <RPieChart />
-        </Card>
-        <Card additionalStyle="col-span-3">
-          <RLineChart />
-        </Card>
-        <Card additionalStyle="col-span-3">
-          <RBarChartExample />
-        </Card>
-        <Card additionalStyle="col-span-3">
-          <RPieChart />
-        </Card>
-        <Card additionalStyle="col-span-2">
-          <RImage src="/images/rooms/room_1.jpg" alt="placeholder" />
-        </Card>
-        <Card additionalStyle="col-span-2">
-          <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
-        </Card>
-        <Card additionalStyle="col-span-2">
-          <RImage src="/images/rooms/room_3.jpg" alt="placeholder" />
-        </Card>
-        <Card additionalStyle="col-span-2">
-          <RImage src="/images/rooms/room_4.jpg" alt="placeholder" />
-        </Card>
-        <Card additionalStyle="col-span-2">
-          <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
-        </Card>
-        <Card additionalStyle="col-span-2">
-          <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
-        </Card>
-      </Grid>
+        <Div className="col-span-6">
+          <Card>
+            <p>test</p>
+            <p>test</p>
+          </Card>
+        </Div>
+
+        <Div className="col-span-6">
+          <Card>
+            <p>test</p>
+            <p>test</p>
+          </Card>
+        </Div>
+
+        <Div className="col-span-6">
+          <Card>
+            <RBarChartExample />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RPieChart />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RLineChart />
+          </Card>
+        </Div>
+
+        <Div className="col-span-6">
+          <Card>
+            <RBarChartExample />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RPieChart />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RLineChart />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RBarChartExample />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RPieChart />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RLineChart />
+          </Card>
+        </Div>
+
+        <Div className="col-span-6">
+          <Card>
+            <RLineChart />
+          </Card>
+        </Div>
+
+        <Div className="col-span-6">
+          <Card>
+            <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RImage src="/images/rooms/room_3.jpg" alt="placeholder" />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RImage src="/images/rooms/room_4.jpg" alt="placeholder" />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
+          </Card>
+        </Div>
+        <Div className="col-span-6">
+          <Card>
+            <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
+          </Card>
+        </Div>
+      </Div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, tenetur
       earum! Optio amet ut sunt corrupti repellat aliquid. Beatae quis,
       provident mollitia neque aspernatur maxime inventore excepturi distinctio

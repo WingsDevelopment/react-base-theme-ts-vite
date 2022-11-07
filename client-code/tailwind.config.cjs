@@ -15,7 +15,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./node_modules/react-tailwindcss-select/dist/index.esm.js",
   ],
+
   theme: {
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      xxl: "1536px",
+    },
     extend: {
       textColor: {
         skin: {

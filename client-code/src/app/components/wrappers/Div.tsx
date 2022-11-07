@@ -5,5 +5,5 @@ interface Props extends PropsWithChildren<{}> {
 }
 
 export const Div: React.FC<Props> = ({ className, children }) => {
-  return <div className={className}>{children}</div>;
+  return <div className={className ? className : ""}>{children}</div>;
 };
