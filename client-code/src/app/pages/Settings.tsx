@@ -36,180 +36,137 @@ export const Settings = () => {
         },
       ]}
     >
-      <Grid container spacing={2}>
-        <Grid item md={6}>
-          <Card>MUI test</Card>
-        </Grid>
-        <Grid item md={6}>
-          <Card>MUI test</Card>
-        </Grid>
-        <Grid item md={6}>
-          <Card>MUI test</Card>
-        </Grid>
-      </Grid>
-      <RGridContainer className="gap-x-4">
-        <RGridItem size={6}>
+      <RGridContainer gap={1}>
+        <RGridItem lg={3} md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem lg={3} md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem lg={3} md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem lg={3} md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem md={6}>
+          <RImage
+            className="image thumbnail"
+            src="https://source.unsplash.com/zG0_RnnxguY"
+            alt=""
+          />
+        </RGridItem>
+        <RGridItem lg={6}>
+          <RImage
+            className="image thumbnail"
+            src="https://source.unsplash.com/zG0_RnnxguY"
+            alt=""
+          />
+        </RGridItem>
+        <RGridItem lg={6}>
+          <RImage
+            className="image thumbnail"
+            src="https://source.unsplash.com/zG0_RnnxguY"
+            alt=""
+          />
+        </RGridItem>
+      </RGridContainer>
+      <RGridContainer gap={1}>
+        <RGridItem sx={6}>
           <Card>my test</Card>
         </RGridItem>
-        <RGridItem size={6}>
+        <RGridItem sx={6}>
           <Card>my test</Card>
         </RGridItem>
-        <RGridItem size={3}>
+        <RGridItem sx={3}>
           <Card>my test</Card>
         </RGridItem>
-        <RGridItem size={9}>
+        <RGridItem sx={9}>
           <Card>my test</Card>
         </RGridItem>
-        <RGridItem size={1}>
+        <RGridItem sx={1}>
           <Card>my test</Card>
         </RGridItem>
-        <RGridItem size={1}>
+        <RGridItem sx={1}>
           <Card>my test</Card>
         </RGridItem>
-        <RGridItem size={10}>
+        <RGridItem sx={10}>
           <Card>my test</Card>
         </RGridItem>
       </RGridContainer>
-      {/* implement mui flex-grid with tailwind */}
-      {/* <Div className="flex flex-row flex-wrap">
-        <Div className="w-1/10 min-w-fit p-2">
-          <Card>TAIL test</Card>
-        </Div>
-        <Div className="w-1/2 min-w-fit p-2">
-          <Card>TAIL test</Card>
-        </Div>
-        <Div className="w-1/2 min-w-fit p-2">
-          <Card>TAIL test</Card>
-        </Div>
-      </Div> */}
       <hr />
       <hr />
-      <hr />
-      <hr />
-      <Div className="grid grid-cols-12">
-        <Div className="col-span-3 min-w-fit">
+      <RGridContainer gap={1}>
+        <RGridItem sx={6}>
           <Card>
             <p>test1</p>
             <p>test1</p>
           </Card>
-        </Div>
-        <Div className="col-span-3 min-w-fit">
-          <Card>
-            <p>test1</p>
-            <p>test1</p>
-          </Card>
-        </Div>
-        <Div className="col-span-3 min-w-fit">
-          <Card>
-            <p>test1</p>
-            <p>test1</p>
-          </Card>
-        </Div>
-        <Div className="col-span-3 min-w-fit">
-          <Card>
-            <p>test</p>
-            <p>test</p>
-          </Card>
-        </Div>
-
-        <Div className="col-span-6">
-          <Card>
-            <p>test</p>
-            <p>test</p>
-          </Card>
-        </Div>
-
-        <Div className="col-span-6">
-          <Card>
-            <p>test</p>
-            <p>test</p>
-          </Card>
-        </Div>
-
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
             <RBarChartExample />
           </Card>
-        </Div>
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
             <RPieChart />
           </Card>
-        </Div>
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
             <RLineChart />
           </Card>
-        </Div>
-
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
+          <Card>
+            <RPieChart />
+          </Card>
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
             <RBarChartExample />
           </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RPieChart />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
             <RLineChart />
           </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RBarChartExample />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RPieChart />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
             <RLineChart />
           </Card>
-        </Div>
-
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
-            <RLineChart />
+            <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
           </Card>
-        </Div>
-
-        <Div className="col-span-6">
-          <Card>
-            <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
             <RImage src="/images/rooms/room_3.jpg" alt="placeholder" />
           </Card>
-        </Div>
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
-            <RImage src="/images/rooms/room_4.jpg" alt="placeholder" />
+            <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
           </Card>
-        </Div>
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
-            <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
+            <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
           </Card>
-        </Div>
-        <Div className="col-span-6">
+        </RGridItem>
+        <RGridItem sx={6}>
           <Card>
-            <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
+            <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
           </Card>
-        </Div>
-      </Div>
+        </RGridItem>
+      </RGridContainer>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, tenetur
       earum! Optio amet ut sunt corrupti repellat aliquid. Beatae quis,
       provident mollitia neque aspernatur maxime inventore excepturi distinctio

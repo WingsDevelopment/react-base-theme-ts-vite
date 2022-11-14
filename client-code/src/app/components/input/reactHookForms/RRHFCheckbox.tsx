@@ -1,5 +1,5 @@
 // form
-import { useFormContext, Controller, RegisterOptions } from "react-hook-form";
+import { useFormContext, Controller } from "react-hook-form";
 import { IFieldProps } from ".";
 import { CheckboxField } from "../nativeWrappers/CheckboxField";
 

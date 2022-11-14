@@ -6,6 +6,8 @@ import RBarChartExample from "../components/charts/RBarChartExample";
 import RLineChart from "../components/charts/RLineChart";
 import RPieChart from "../components/charts/RPieChart";
 import { Div } from "../components/wrappers/Div";
+import { RGridContainer } from "../components/grid/RGridContainer";
+import { RGridItem } from "../components/grid/RGridItem";
 // const RPieChart = lazy(() => import("../components/RPieChart"));
 
 export const Home = () => {
@@ -33,130 +35,67 @@ export const Home = () => {
         },
       ]}
     >
-      <Div className="grid sm:grid-cols-3 md:grid-cols-6 xl:grid-cols-12">
-        <Div className="col-span-3">
-          <Card>
-            <p>test1</p>
-            <p>test</p>
-          </Card>
-        </Div>
-        <Div className="col-span-3">
-          <Card>
-            <p>test</p>
-            <p>test</p>
-          </Card>
-        </Div>
-        <Div className="col-span-3">
-          <Card>
-            <p>test</p>
-            <p>test</p>
-          </Card>
-        </Div>
-        <Div className="col-span-3">
-          <Card>
-            <p>test</p>
-            <p>test</p>
-          </Card>
-        </Div>
-
-        <Div className="col-span-6">
-          <Card>
-            <p>test</p>
-            <p>test</p>
-          </Card>
-        </Div>
-
-        <Div className="col-span-6">
-          <Card>
-            <p>test</p>
-            <p>test</p>
-          </Card>
-        </Div>
-
-        <Div className="col-span-6">
-          <Card>
-            <RBarChartExample />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RPieChart />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RLineChart />
-          </Card>
-        </Div>
-
-        <Div className="col-span-6">
-          <Card>
-            <RBarChartExample />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RPieChart />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RLineChart />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RBarChartExample />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RPieChart />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RLineChart />
-          </Card>
-        </Div>
-
-        <Div className="col-span-6">
-          <Card>
-            <RLineChart />
-          </Card>
-        </Div>
-
-        <Div className="col-span-6">
-          <Card>
-            <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RImage src="/images/rooms/room_2.jpg" alt="placeholder" />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RImage src="/images/rooms/room_3.jpg" alt="placeholder" />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RImage src="/images/rooms/room_4.jpg" alt="placeholder" />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
-          </Card>
-        </Div>
-        <Div className="col-span-6">
-          <Card>
-            <RImage src="/images/rooms/room_5.jpg" alt="placeholder" />
-          </Card>
-        </Div>
-      </Div>
+      <RGridContainer gap={1}>
+        <RGridItem lg={3} md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem lg={3} md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem lg={3} md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem lg={3} md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem md={6}>
+          <RImage src="https://source.unsplash.com/zG0_RnnxguY" alt="" />
+        </RGridItem>
+        <RGridItem md={6}>
+          <RImage
+            className="image thumbnail"
+            src="https://source.unsplash.com/zG0_RnnxguY"
+            alt=""
+          />
+        </RGridItem>
+        <RGridItem lg={6}>
+          <RImage
+            className="image thumbnail"
+            src="https://source.unsplash.com/zG0_RnnxguY"
+            alt=""
+          />
+        </RGridItem>
+        <RGridItem lg={6}>
+          <RImage
+            className="image thumbnail"
+            src="https://source.unsplash.com/zG0_RnnxguY"
+            alt=""
+          />
+        </RGridItem>
+      </RGridContainer>
+      <RGridContainer>
+        <RGridItem sx={6}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem sx={6}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem sx={3}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem sx={9}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem sx={1}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem sx={1}>
+          <Card>my test</Card>
+        </RGridItem>
+        <RGridItem sx={10}>
+          <Card>my test</Card>
+        </RGridItem>
+      </RGridContainer>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, tenetur
       earum! Optio amet ut sunt corrupti repellat aliquid. Beatae quis,
       provident mollitia neque aspernatur maxime inventore excepturi distinctio

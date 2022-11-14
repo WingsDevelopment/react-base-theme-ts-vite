@@ -10,16 +10,19 @@ interface Props extends PropsWithChildren<{}> {
   isCollapsed: boolean;
 }
 
-export const MiddleSidebar: React.FC<Props> = ({
-  navConfig,
-  isCollapsed,
-  children,
-}) => {
-  const navigate = useNavigate();
-
+export const MiddleSidebar: React.FC<Props> = ({ navConfig, isCollapsed }) => {
   return (
-    <Div className="flex-grow-0 w-full">
-      <ul>
+    <Div
+      style={{
+        flexGrow: 0,
+        width: "100%",
+      }}
+    >
+      <ul
+        style={{
+          listStyle: "none",
+        }}
+      >
         {navConfig.map((item, index) => {
           return (
             <NavItem isCollapsed={isCollapsed} item={item} key={item.path} />

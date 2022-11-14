@@ -19,21 +19,59 @@ export const RBreadcrumbs: React.FC<Props> = ({
 }) => {
   const navigate = useNavigate();
   return (
-    <div className="grid grid-cols-2 content-between">
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+        alignContent: "space-between",
+      }}
+    >
       <div>
-        {heading && <h1 className="text-2xl font-bold">{heading}</h1>}
+        {heading && (
+          <h1
+            style={{
+              fontSize: "1.5rem",
+              lineHeight: "2rem",
+              fontWeight: 700,
+            }}
+          >
+            {heading}
+          </h1>
+        )}
         {links && (
-          <div className="flex flex-row">
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
             {links.map((link, index) => {
               return (
-                <div key={index} className="flex flex-row">
+                <div
+                  key={index}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                  }}
+                >
                   <span
-                    className="cursor-pointer"
+                    style={{
+                      cursor: "pointer",
+                    }}
                     onClick={() => navigate(link.href)}
                   >
                     {link.name}
                   </span>
-                  {index < links.length - 1 && <span className="mx-2">/</span>}
+                  {index < links.length - 1 && (
+                    <span
+                      style={{
+                        marginLeft: "0.5rem",
+                        marginRight: "0.5rem",
+                      }}
+                    >
+                      /
+                    </span>
+                  )}
                 </div>
               );
             })}
@@ -41,7 +79,15 @@ export const RBreadcrumbs: React.FC<Props> = ({
         )}
       </div>
       {breadcrumbAction && (
-        <div className="flex flex-row justify-end">{breadcrumbAction}</div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "flex-end",
+          }}
+        >
+          {breadcrumbAction}
+        </div>
       )}
       {!breadcrumbAction && <div></div>}
     </div>

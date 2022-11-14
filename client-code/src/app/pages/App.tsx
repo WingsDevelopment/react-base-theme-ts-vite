@@ -25,30 +25,30 @@ function App() {
     useThemeContext();
 
   return (
-    <div className={`${mode} ${theme}`}>
-      <div className="bg-slate-50 dark:bg-slate-800 dark:text-slate-50 min-h-screen">
-        <Header>
-          <RButton onClick={() => setIsCollapsed(!isCollapsed)}>TT</RButton>
-          <RButton onClick={() => setMode(mode === "" ? "dark" : "")}>
-            mode
-          </RButton>
-          <RButton onClick={() => setIsStrached(!isStrached)}>Stratch</RButton>
-          <RButton onClick={() => setTheme("theme-blue")}>Blue</RButton>
-          <RButton onClick={() => setTheme("theme-dark-blue")}>
-            Dark blue
-          </RButton>
-          <RButton onClick={() => setTheme("theme-purple")}>Purple</RButton>
-          <RButton onClick={() => setTheme("theme-green")}>Green</RButton>
-          <RButton onClick={() => setTheme("theme-red")}>Red</RButton>
-          <RButton onClick={() => setTheme("theme-yellow")}>Yellow</RButton>
-        </Header>
-        <Container>
-          <Sidebar isCollapsed={isCollapsed} navConfig={navConfig} />
-          <Suspense fallback={<div>loading. . .</div>}>
-            <Router />
-          </Suspense>
-        </Container>
-      </div>
+    <div className={`theme ${mode} ${theme}`}>
+      <Header>
+        <RButton onClick={() => setIsCollapsed(!isCollapsed)}>TT</RButton>
+        <RButton
+          onClick={() =>
+            setMode(mode === "white-theme" ? "dark-theme" : "white-theme")
+          }
+        >
+          mode
+        </RButton>
+        <RButton onClick={() => setIsStrached(!isStrached)}>Stratch</RButton>
+        <RButton onClick={() => setTheme("theme-blue")}>Blue</RButton>
+        <RButton onClick={() => setTheme("theme-dark-blue")}>Dark blue</RButton>
+        <RButton onClick={() => setTheme("theme-purple")}>Purple</RButton>
+        <RButton onClick={() => setTheme("theme-green")}>Green</RButton>
+        <RButton onClick={() => setTheme("theme-red")}>Red</RButton>
+        <RButton onClick={() => setTheme("theme-yellow")}>Yellow</RButton>
+      </Header>
+      <Container>
+        <Sidebar isCollapsed={isCollapsed} navConfig={navConfig} />
+        <Suspense fallback={<div>loading. . .</div>}>
+          <Router />
+        </Suspense>
+      </Container>
     </div>
   );
 }

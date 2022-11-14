@@ -1,7 +1,7 @@
+import { Select } from "@mui/material";
 import React, { PropsWithChildren } from "react";
 import { FieldProps } from ".";
 import { IOption } from "../reactHookForms";
-import Select from "react-tailwindcss-select";
 
 interface SelectProps extends FieldProps {
   options: IOption[];
@@ -33,7 +33,7 @@ export const SelectField: React.FC<SelectProps> = ({
       <label className="block text-sm font-medium text-gray-900 dark:text-gray-300">
         {label}
       </label>
-      <Select
+      {/* <Select
         isMultiple={isMultiple || false}
         isSearchable={isSearchable || false}
         onChange={(e: IOption | IOption[] | null | undefined) => {
@@ -52,7 +52,7 @@ export const SelectField: React.FC<SelectProps> = ({
           value: option.value?.toString() || "",
           label: option.label,
         }))}
-      />
+      /> */}
       {error && (
         <p className="mt-2 text-sm text-red-600 dark:text-red-400">{error}</p>
       )}

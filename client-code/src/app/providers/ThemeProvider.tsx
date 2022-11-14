@@ -8,8 +8,8 @@ export type Theme =
   | "theme-red"
   | "theme-yellow";
 interface ThemeContext {
-  mode: "" | "dark";
-  setMode: (mode: "" | "dark") => void;
+  mode: "white-theme" | "dark-theme";
+  setMode: (mode: "white-theme" | "dark-theme") => void;
   theme: Theme;
   setTheme: (theme: Theme) => void;
   isStrached: boolean;
@@ -21,7 +21,7 @@ interface ThemeContext {
 }
 
 export const ThemeContext = createContext<ThemeContext | null>({
-  mode: "",
+  mode: "dark-theme",
   setMode: () => {},
   theme: "theme-blue",
   setTheme: () => {},
@@ -42,7 +42,9 @@ export const useThemeContext = () => {
 };
 
 export const ThemeProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [mode, setMode] = React.useState<"" | "dark">("dark");
+  const [mode, setMode] = React.useState<"white-theme" | "dark-theme">(
+    "dark-theme"
+  );
   const [theme, setTheme] = React.useState<Theme>("theme-green");
   const [isStrached, setIsStrached] = React.useState<boolean>(false);
   const [direction, setDirection] = React.useState<"ltr" | "rtl">("ltr");

@@ -28,7 +28,16 @@ export const RButton: React.FC<Props> = ({
     <button
       onClick={onClick}
       type={type}
-      className="bg-skin-primary font-bold py-2 px-4 rounded"
+      style={{
+        cursor: "pointer",
+        backgroundColor: "var(--color-primary)",
+        fontWeight: "700",
+        paddingTop: "0.5rem",
+        paddingBottom: "0.5rem",
+        paddingLeft: "1rem",
+        paddingRight: "1rem",
+        borderRadius: "0.25rem",
+      }}
     >
       {children}
     </button>

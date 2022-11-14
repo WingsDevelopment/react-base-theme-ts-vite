@@ -7,6 +7,8 @@ interface Props extends PropsWithChildren<{}> {
 
 export const Content: React.FC<Props> = ({ isStrached, children }) => {
   return (
-    <Div className={` ${isStrached ? "m-8" : "mx-64 my-8"}`}>{children}</Div>
+    <Div className={`${isStrached ? "strached-content" : "normal-content"}`}>
+      {children}
+    </Div>
   );
 };

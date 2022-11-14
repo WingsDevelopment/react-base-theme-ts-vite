@@ -1,5 +1,16 @@
 import React, { PropsWithChildren } from "react";
 
 export const TopSidebar: React.FC<PropsWithChildren> = ({ children }) => {
-  return <div className="flex flex-col items-center mb-5">{children}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginBottom: "1.25rem",
+      }}
+    >
+      {children}
+    </div>
+  );
 };

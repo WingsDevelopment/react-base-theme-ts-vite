@@ -1,5 +1,15 @@
 import React, { PropsWithChildren } from "react";
 
 export const RSingleColumnBox: React.FC<PropsWithChildren> = ({ children }) => {
-  return <div className="grid grid-cols-1 gap-4 ">{children}</div>;
+  return (
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
+        gap: "1rem",
+      }}
+    >
+      {children}
+    </div>
+  );
 };

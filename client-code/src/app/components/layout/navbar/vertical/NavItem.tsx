@@ -14,11 +14,23 @@ export const NavItem: React.FC<Props> = ({ isCollapsed, item }) => {
 
   const navigate = useNavigate();
   return (
-    <li className="w-full" onClick={() => navigate(item.path)}>
+    <li
+      className={`nav-item ${active ? "active" : ""}`}
+      style={{
+        width: "100%",
+      }}
+      onClick={() => navigate(item.path)}
+    >
       <Div
-        className={`cursor-pointer rounded-lg flex w-full pl-5 py-2 hover:bg-sky-700 ${
-          active ? "bg-slate-500" : ""
-        }`}
+        style={{
+          cursor: "pointer",
+          borderRadius: "0.5rem",
+          display: "flex",
+          width: "100%",
+          paddingLeft: "1.25rem",
+          paddingTop: "0.5rem",
+          paddingBottom: "0.5rem",
+        }}
       >
         {item.icon && item.icon}
         {!isCollapsed && <span>{item.name}</span>}
