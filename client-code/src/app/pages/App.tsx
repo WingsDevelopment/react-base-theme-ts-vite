@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from "react";
-import { Container } from "../components/wrappers/Container";
-import { Content } from "../components/wrappers/Content";
+import { RContainer } from "../components/wrappers/RContainer";
+import { RContent } from "../components/wrappers/RContent";
 import { Header } from "../components/layout/Header";
 import { Sidebar } from "../components/layout/navbar/vertical/Sidebar";
 import { useThemeContext } from "../providers/ThemeProvider";
@@ -43,12 +43,12 @@ function App() {
         <RButton onClick={() => setTheme("theme-red")}>Red</RButton>
         <RButton onClick={() => setTheme("theme-yellow")}>Yellow</RButton>
       </Header>
-      <Container>
+      <RContainer>
         <Sidebar isCollapsed={isCollapsed} navConfig={navConfig} />
         <Suspense fallback={<div>loading. . .</div>}>
           <Router />
         </Suspense>
-      </Container>
+      </RContainer>
     </div>
   );
 }

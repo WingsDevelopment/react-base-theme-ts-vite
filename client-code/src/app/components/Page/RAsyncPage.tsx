@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
-import { AsyncContent } from "../wrappers/AsyncContent";
+import { RAsyncContent } from "../wrappers/RAsyncContent";
 import { ILink, RBreadcrumbs } from "../wrappers/RBreadcrumbs";
 import { RPageContent } from "./RPageContent";
 
@@ -20,12 +20,12 @@ export const RAsyncPage: React.FC<Props> = ({
   return (
     <RPageContent>
       <RBreadcrumbs heading={title} links={breadcrumbsLinks} />
-      <AsyncContent
+      <RAsyncContent
         isLoading={isContentLoading}
         errorMesssage={contentErrorMessage}
       >
         {children}
-      </AsyncContent>
+      </RAsyncContent>
     </RPageContent>
   );
 };

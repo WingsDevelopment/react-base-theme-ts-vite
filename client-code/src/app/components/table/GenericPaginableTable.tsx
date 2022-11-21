@@ -65,17 +65,13 @@ export const GenericPaginableTable: React.FC<Props> = ({
     <Card {...other}>
       {tableHeaerComponent}
 
-      <div className="flex flex-col mt-4">
-        <div className="align-middle min-w-full overflow-x-auto shadow overflow-hidden sm:rounded-lg">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
+      <div>
+        <div>
+          <table>
+            <thead>
               <tr>
                 {tableLabels.map((label) => (
-                  <td
-                    key={label.id}
-                    scope="col"
-                    className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                  >
+                  <td key={label.id} scope="col">
                     {label.label}
                   </td>
                 ))}
@@ -86,9 +82,9 @@ export const GenericPaginableTable: React.FC<Props> = ({
         </div>
       </div>
 
-      <div className="flex flex-row justify-between">
-        <div className="flex flex-row">
-          <div className="flex flex-row items-center">
+      <div>
+        <div>
+          <div>
             <NumberField
               label="Rows per page"
               name="itemsPerPage"
@@ -96,21 +92,21 @@ export const GenericPaginableTable: React.FC<Props> = ({
               onChange={onChangeItemsPerPage}
             />
           </div>
-          <div className="flex flex-row items-center ml-4">
-            <span className="mr-2">Dense padding</span>
+          <div>
+            <span>Dense padding</span>
             <input type="checkbox" checked={dense} onChange={onChangeDense} />
           </div>
         </div>
-        <div className="flex flex-row">
-          <div className="flex flex-row items-center">
-            <span className="mr-2">Page:</span>
+        <div>
+          <div>
+            <span>Page:</span>
             <NumberField
               label="Page"
               name="page"
               value={numberOfPages}
               onChange={onPageChange}
             />
-            <span className="mx-2">of</span>
+            <span>of</span>
             <span>{numberOfPages}</span>
           </div>
         </div>

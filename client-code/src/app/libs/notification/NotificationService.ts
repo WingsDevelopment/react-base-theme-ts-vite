@@ -5,6 +5,7 @@ import {
 
 export const NotificationService: INotificationService = {
   EnqueueMessage: (message: string, type: NotificationType) => {
-    window.alert(message);
+    console.log(message);
+    console.log(type);
   },
 };

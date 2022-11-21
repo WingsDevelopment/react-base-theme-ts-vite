@@ -5,10 +5,10 @@ interface Props extends PropsWithChildren<{}> {
   isStrached?: boolean;
 }
 
-export const Content: React.FC<Props> = ({ isStrached, children }) => {
+export const RContent: React.FC<Props> = ({ isStrached, children }) => {
   return (
-    <Div className={`${isStrached ? "strached-content" : "normal-content"}`}>
+    <div className={`${isStrached ? "strached-content" : "normal-content"}`}>
       {children}
-    </Div>
+    </div>
   );
 };

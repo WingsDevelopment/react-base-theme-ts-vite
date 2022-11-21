@@ -1,5 +1,5 @@
-import { AsyncContent } from "../../../../../components/wrappers/AsyncContent";
 import { DefaultReadOnlyTextField } from "../../../../../components/input/readonly/DefaultReadOnlyTextField";
+import { RAsyncContent } from "../../../../../components/wrappers/RAsyncContent";
 import { RSingleColumnBox } from "../../../../../components/wrappers/RSingleColumnBox";
 import { Tag } from "../../../models/Tag";
 
@@ -10,7 +10,7 @@ interface Props {
 
 export const DetailsTagBody: React.FC<Props> = ({ tag, isLoading }) => {
   return (
-    <AsyncContent isLoading={isLoading}>
+    <RAsyncContent isLoading={isLoading}>
       <RSingleColumnBox>
         <DefaultReadOnlyTextField value={tag?.id?.toString()} label="Id" />
 
@@ -44,6 +44,6 @@ export const DetailsTagBody: React.FC<Props> = ({ tag, isLoading }) => {
           label="Order"
         />
       </RSingleColumnBox>
-    </AsyncContent>
+    </RAsyncContent>
   );
 };

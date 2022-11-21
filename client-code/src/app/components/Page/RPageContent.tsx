@@ -1,10 +1,9 @@
 import React, { PropsWithChildren } from "react";
 import { useThemeContext } from "../../providers/ThemeProvider";
-import { Content } from "../wrappers/Content";
-import { Div } from "../wrappers/Div";
+import { RContent } from "../wrappers/RContent";
 
 export const RPageContent: React.FC<PropsWithChildren> = ({ children }) => {
   const { isStrached } = useThemeContext();
 
-  return <Content isStrached={isStrached}>{children}</Content>;
+  return <RContent isStrached={isStrached}>{children}</RContent>;
 };

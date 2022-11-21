@@ -5,7 +5,7 @@ interface Props extends PropsWithChildren<{}> {
   errorMesssage?: string;
 }
 
-export const AsyncContent: React.FC<Props> = ({
+export const RAsyncContent: React.FC<Props> = ({
   isLoading,
   errorMesssage,
   children,

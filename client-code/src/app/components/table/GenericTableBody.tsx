@@ -19,18 +19,14 @@ export const GenericTableBody: React.FC<Props> = ({
     }
   };
 
-  return (
-    <tbody className="bg-white divide-y divide-gray-200">
-      {getTableBody()}
-    </tbody>
-  );
+  return <tbody>{getTableBody()}</tbody>;
 };
 
 const TableSkeleton = ({ rowCount }: { rowCount: number }) => {
   return (
     <>
       {Array.from(Array(rowCount).keys()).map((index) => (
-        <tr key={index}>
+        <tr key={"row-" + index}>
           <td>skeleton...</td>
           <td>skeleton...</td>
           <td>skeleton...</td>
@@ -48,9 +44,7 @@ const TableSkeleton = ({ rowCount }: { rowCount: number }) => {
 const TableNoData = ({ isNotFound }: { isNotFound: boolean }) => {
   return (
     <tr>
-      <td colSpan={8} className="text-center">
-        {isNotFound ? "Nema podataka" : "Učitavanje..."}
-      </td>
+      <td colSpan={8}>{isNotFound ? "NO DATA FOUND" : "LOADING..."}</td>
     </tr>
   );
 };

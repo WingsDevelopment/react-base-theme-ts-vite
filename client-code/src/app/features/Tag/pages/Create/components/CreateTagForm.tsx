@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { AsyncContent } from "../../../../../components/wrappers/AsyncContent";
+import { RAsyncContent } from "../../../../../components/wrappers/RAsyncContent";
 import MyFormProvider from "../../../../../components/input/reactHookForms/MyFormProvider";
 import RRHFTextField from "../../../../../components/input/reactHookForms/RRHFTextField";
 import RRHFTextFieldMultiline from "../../../../../components/input/reactHookForms/RRHFTextFieldMultiline";
@@ -24,7 +24,7 @@ export const CreateTagForm: React.FC<Props> = ({
   };
 
   return (
-    <AsyncContent isLoading={isLoading}>
+    <RAsyncContent isLoading={isLoading}>
       <MyFormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
         <RSingleColumnBox>
           <RRHFTextField<CreateTag>
@@ -42,6 +42,6 @@ export const CreateTagForm: React.FC<Props> = ({
           <button type="submit">Submit</button>
         </RSingleColumnBox>
       </MyFormProvider>
-    </AsyncContent>
+    </RAsyncContent>
   );
 };

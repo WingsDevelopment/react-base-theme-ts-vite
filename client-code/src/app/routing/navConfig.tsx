@@ -29,85 +29,69 @@ export const navConfig: NavConfigItem[] = [
     path: TagRoutes.index,
   },
   {
-    name: "Home1",
+    name: "---------",
+    icon: <RIconify icon="noto:test-tube" />,
+    path: "/home12",
+  },
+  {
+    name: "App",
     icon: <RIconify icon="noto:test-tube" />,
     path: "/home1",
   },
   {
-    name: "Test1",
+    name: "E-Commerce",
     icon: <RIconify icon="healthicons:malaria-testing" />,
     path: "/test1",
   },
   {
-    name: "Users1",
+    name: "Analytics",
     icon: <RIconify icon="healthicons:intestinal-pain-negative" />,
     path: "/users1",
   },
   {
-    name: "Settings1",
+    name: "Banking",
     icon: <RIconify icon="simple-icons:minetest" />,
     path: "/settings1",
   },
 
   {
-    name: "Home2",
+    name: "Booking",
     icon: <RIconify icon="logos:testlodge" />,
     path: "/home2",
   },
   {
-    name: "Test2",
+    name: "File",
     icon: <RIconify icon="logos:testcafe" />,
     path: "/test2",
   },
   {
-    name: "Users2",
+    name: "User",
     icon: <RIconify icon="logos:user-testing-icon" />,
     path: "/users2",
   },
   {
-    name: "Settings2",
+    name: "E-Commerce",
     icon: <RIconify icon="vscode-icons:file-type-light-testjs" />,
     path: "/settings2",
   },
-
   {
-    name: "Home3",
-    icon: <RIconify icon="file-icons:test-rust" />,
-    path: "/home3",
-  },
-  {
-    name: "Test3",
+    name: "Invoice",
     icon: <RIconify icon="fluent-emoji:test-tube" />,
     path: "/test3",
   },
   {
-    name: "Users3",
+    name: "Blog",
     icon: <RIconify icon="vscode-icons:folder-type-vscode-test3" />,
     path: "/users3",
   },
   {
-    name: "Settings3",
+    name: "File Manager",
     icon: <RIconify icon="vscode-icons:file-type-light-testjs" />,
     path: "/settings3",
   },
   {
-    name: "Home4",
+    name: "Blank",
     icon: <RIconify icon="file-icons:test-rust" />,
     path: "/home4",
-  },
-  {
-    name: "Test4",
-    icon: <RIconify icon="fluent-emoji:test-tube" />,
-    path: "/test4",
-  },
-  {
-    name: "Users4",
-    icon: <RIconify icon="vscode-icons:folder-type-vscode-test3" />,
-    path: "/users4",
-  },
-  {
-    name: "Settings4",
-    icon: <RIconify icon="vscode-icons:file-type-light-testjs" />,
-    path: "/settings4",
   },
 ];
